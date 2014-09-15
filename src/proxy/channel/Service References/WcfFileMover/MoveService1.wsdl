@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="http://tempuri.org/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" name="MoveService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://172.20.61.21:8101/File_Moving_V10?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://172.20.61.21:8101/File_Moving_V10?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://172.20.61.21:8101/File_Moving_V10?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://172.20.61.21:8101/File_Moving_V10?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.IO" />
+      <xsd:import schemaLocation="http://172.20.61.21:8101/File_Moving_V10?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/uBizSoft.FileCopy.Server" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMoveService_GetDirectories_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDirectories" />
+  </wsdl:message>
+  <wsdl:message name="IMoveService_GetDirectories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDirectoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMoveService_GetDirectoryInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDirectoryInfo" />
+  </wsdl:message>
+  <wsdl:message name="IMoveService_GetDirectoryInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDirectoryInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMoveService_GetDirectoryInfos_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDirectoryInfos" />
+  </wsdl:message>
+  <wsdl:message name="IMoveService_GetDirectoryInfos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDirectoryInfosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMoveService_GetDrives_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDrives" />
+  </wsdl:message>
+  <wsdl:message name="IMoveService_GetDrives_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDrivesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMoveService_DirectoryExists_InputMessage">
+    <wsdl:part name="parameters" element="tns:DirectoryExists" />
+  </wsdl:message>
+  <wsdl:message name="IMoveService_DirectoryExists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DirectoryExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMoveService_GetFiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFiles" />
+  </wsdl:message>
+  <wsdl:message name="IMoveService_GetFiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMoveService_GetFileInfos_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFileInfos" />
+  </wsdl:message>
+  <wsdl:message name="IMoveService_GetFileInfos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFileInfosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMoveService_PrepareFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:PrepareFile" />
+  </wsdl:message>
+  <wsdl:message name="IMoveService_PrepareFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PrepareFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMoveService_DownloadFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:DownloadFile" />
+  </wsdl:message>
+  <wsdl:message name="IMoveService_DownloadFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DownloadFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMoveService_VerifyFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyFile" />
+  </wsdl:message>
+  <wsdl:message name="IMoveService_VerifyFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyFileResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IMoveService">
+    <wsdl:operation name="GetDirectories">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMoveService/GetDirectories" message="tns:IMoveService_GetDirectories_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMoveService/GetDirectoriesResponse" message="tns:IMoveService_GetDirectories_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDirectoryInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMoveService/GetDirectoryInfo" message="tns:IMoveService_GetDirectoryInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMoveService/GetDirectoryInfoResponse" message="tns:IMoveService_GetDirectoryInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDirectoryInfos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMoveService/GetDirectoryInfos" message="tns:IMoveService_GetDirectoryInfos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMoveService/GetDirectoryInfosResponse" message="tns:IMoveService_GetDirectoryInfos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDrives">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMoveService/GetDrives" message="tns:IMoveService_GetDrives_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMoveService/GetDrivesResponse" message="tns:IMoveService_GetDrives_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DirectoryExists">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMoveService/DirectoryExists" message="tns:IMoveService_DirectoryExists_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMoveService/DirectoryExistsResponse" message="tns:IMoveService_DirectoryExists_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFiles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMoveService/GetFiles" message="tns:IMoveService_GetFiles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMoveService/GetFilesResponse" message="tns:IMoveService_GetFiles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFileInfos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMoveService/GetFileInfos" message="tns:IMoveService_GetFileInfos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMoveService/GetFileInfosResponse" message="tns:IMoveService_GetFileInfos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PrepareFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMoveService/PrepareFile" message="tns:IMoveService_PrepareFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMoveService/PrepareFileResponse" message="tns:IMoveService_PrepareFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMoveService/DownloadFile" message="tns:IMoveService_DownloadFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMoveService/DownloadFileResponse" message="tns:IMoveService_DownloadFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMoveService/VerifyFile" message="tns:IMoveService_VerifyFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMoveService/VerifyFileResponse" message="tns:IMoveService_VerifyFile_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IMoveService" type="tns:IMoveService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDirectories">
+      <soap:operation soapAction="http://tempuri.org/IMoveService/GetDirectories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDirectoryInfo">
+      <soap:operation soapAction="http://tempuri.org/IMoveService/GetDirectoryInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDirectoryInfos">
+      <soap:operation soapAction="http://tempuri.org/IMoveService/GetDirectoryInfos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDrives">
+      <soap:operation soapAction="http://tempuri.org/IMoveService/GetDrives" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DirectoryExists">
+      <soap:operation soapAction="http://tempuri.org/IMoveService/DirectoryExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFiles">
+      <soap:operation soapAction="http://tempuri.org/IMoveService/GetFiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileInfos">
+      <soap:operation soapAction="http://tempuri.org/IMoveService/GetFileInfos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrepareFile">
+      <soap:operation soapAction="http://tempuri.org/IMoveService/PrepareFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFile">
+      <soap:operation soapAction="http://tempuri.org/IMoveService/DownloadFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyFile">
+      <soap:operation soapAction="http://tempuri.org/IMoveService/VerifyFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MoveService">
+    <wsdl:port name="BasicHttpBinding_IMoveService" binding="tns:BasicHttpBinding_IMoveService">
+      <soap:address location="http://172.20.61.21:8100/File_Moving_V10" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

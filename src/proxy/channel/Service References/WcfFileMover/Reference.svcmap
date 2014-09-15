@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4b9391c8-483d-4e4f-92b2-b0ab02354058" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://ubsv1:8101/File_Moving_V10" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="File_Moving_V105.xsd" MetadataType="Schema" ID="d8c02a65-ae21-4772-a446-770d5c6a6ba6" SourceId="1" SourceUrl="http://172.20.61.21:8101/File_Moving_V10?xsd=xsd0" />
+    <MetadataFile FileName="File_Moving_V1051.xsd" MetadataType="Schema" ID="9ad1f035-d82f-47d4-9263-d0bc8a25efba" SourceId="1" SourceUrl="http://172.20.61.21:8101/File_Moving_V10?xsd=xsd1" />
+    <MetadataFile FileName="File_Moving_V1052.xsd" MetadataType="Schema" ID="020ef488-4b25-46e9-85cb-3be0a860db7a" SourceId="1" SourceUrl="http://172.20.61.21:8101/File_Moving_V10?xsd=xsd2" />
+    <MetadataFile FileName="File_Moving_V1053.xsd" MetadataType="Schema" ID="958fd323-66fc-4896-b360-07e12ce23e40" SourceId="1" SourceUrl="http://172.20.61.21:8101/File_Moving_V10?xsd=xsd3" />
+    <MetadataFile FileName="File_Moving_V1054.xsd" MetadataType="Schema" ID="f439609c-f4a8-4f97-8d82-f4276c436368" SourceId="1" SourceUrl="http://172.20.61.21:8101/File_Moving_V10?xsd=xsd4" />
+    <MetadataFile FileName="MoveService1.wsdl" MetadataType="Wsdl" ID="b647b583-8cfe-442e-95ec-cff8f2707af6" SourceId="1" SourceUrl="http://ubsv1:8101/File_Moving_V10" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
